@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
 <head>
     <meta charset="utf-8" />
     <title>Create New Product</title>
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.slim.js"
-            integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-            crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
     <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 </head>
 <body>
 <div align="center">
-    <h1>Create New User</h1>
+    <h1>Create New Student</h1>
     <br />
     <div class="col-sm-4">
         <form action="#" th:action="@{/save}" th:object="${user}" method="post">
-
+<table>
 
             <div alight="left">
                 <tr>
-                    <label class="form-label" >User Name</label>
+                    <label class="form-label" >Username</label>
                     <td>
                         <input type="hidden" th:field="*{id}" />
-                        <input type="text" th:field="*{username}" class="form-control" placeholder="User Name" />
+                        <input type="text" th:field="*{username}" class="form-control" placeholder="username" />
                     </td>
                 </tr>
             </div>
@@ -32,11 +28,12 @@
             <div alight="left">
 
                 <tr>
-                    <label class="form-label" >Password</label>
-                    <td><input type="text" th:field="*{password}" class="form-control" placeholder="Password" /></td>
+                    <label class="form-label" >password</label>
+                    <td><input type="text" th:field="*{password}" class="form-control" placeholder="password" /></td>
                 </tr>
             </div>
 
+            <br>
             <tr>
                 <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
             </tr>
